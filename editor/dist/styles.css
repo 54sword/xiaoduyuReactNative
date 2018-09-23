@@ -1,0 +1,291 @@
+/**
+ * Draft v0.10.5
+ *
+ * Copyright (c) 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
+.DraftEditor-editorContainer,.DraftEditor-root,.public-DraftEditor-content{height:inherit;text-align:initial}.public-DraftEditor-content[contenteditable=true]{-webkit-user-modify:read-write-plaintext-only}.DraftEditor-root{position:relative}.DraftEditor-editorContainer{background-color:rgba(255,255,255,0);border-left:.1px solid transparent;position:relative;z-index:1}.public-DraftEditor-block{position:relative}.DraftEditor-alignLeft .public-DraftStyleDefault-block{text-align:left}.DraftEditor-alignLeft .public-DraftEditorPlaceholder-root{left:0;text-align:left}.DraftEditor-alignCenter .public-DraftStyleDefault-block{text-align:center}.DraftEditor-alignCenter .public-DraftEditorPlaceholder-root{margin:0 auto;text-align:center;width:100%}.DraftEditor-alignRight .public-DraftStyleDefault-block{text-align:right}.DraftEditor-alignRight .public-DraftEditorPlaceholder-root{right:0;text-align:right}.public-DraftEditorPlaceholder-root{color:#9197a3;position:absolute;z-index:1}.public-DraftEditorPlaceholder-hasFocus{color:#bdc1c9}.DraftEditorPlaceholder-hidden{display:none}.public-DraftStyleDefault-block{position:relative;white-space:pre-wrap}.public-DraftStyleDefault-ltr{direction:ltr;text-align:left}.public-DraftStyleDefault-rtl{direction:rtl;text-align:right}.public-DraftStyleDefault-listLTR{direction:ltr}.public-DraftStyleDefault-listRTL{direction:rtl}.public-DraftStyleDefault-ol,.public-DraftStyleDefault-ul{margin:16px 0;padding:0}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listLTR{margin-left:1.5em}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listRTL{margin-right:1.5em}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-listLTR{margin-left:3em}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-listRTL{margin-right:3em}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-listLTR{margin-left:4.5em}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-listRTL{margin-right:4.5em}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-listLTR{margin-left:6em}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-listRTL{margin-right:6em}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-listLTR{margin-left:7.5em}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-listRTL{margin-right:7.5em}.public-DraftStyleDefault-unorderedListItem{list-style-type:square;position:relative}.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth0{list-style-type:disc}.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth1{list-style-type:circle}.public-DraftStyleDefault-orderedListItem{list-style-type:none;position:relative}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listLTR:before{left:-36px;position:absolute;text-align:right;width:30px}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listRTL:before{position:absolute;right:-36px;text-align:left;width:30px}.public-DraftStyleDefault-orderedListItem:before{content:counter(ol0) ". ";counter-increment:ol0}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth1:before{content:counter(ol1) ". ";counter-increment:ol1}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth2:before{content:counter(ol2) ". ";counter-increment:ol2}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth3:before{content:counter(ol3) ". ";counter-increment:ol3}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth4:before{content:counter(ol4) ". ";counter-increment:ol4}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-reset{counter-reset:ol0}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-reset{counter-reset:ol1}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-reset{counter-reset:ol2}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-reset{counter-reset:ol3}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-reset{counter-reset:ol4}
+
+html, body{
+  /* padding: 5px 5px 5px 5px; */
+  padding:0px;
+  margin: 0px;
+
+  /* border-bottom: 4px solid red; */
+  /* background-color: #efefef; */
+  /*color: #333;*/
+  font-size: 15px;
+  /* margin-bottom: -3px; */
+
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+/* 内容样式 */
+/*
+.DraftEditor-root{
+}
+
+
+
+.DraftEditor-root figure{
+  margin:0;
+  -webkit-user-modify: read-only !important;
+  width: 100%;
+  pointer-events: none;
+}
+
+
+.DraftEditor-root embed,
+.DraftEditor-root iframe{
+  width:100%;
+  border:none;
+}
+
+.DraftEditor-root embed, .DraftEditor-root iframe{
+  min-height: 460px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .DraftEditor-root embed, .DraftEditor-root iframe{
+    min-height: 216px;
+  }
+}
+
+
+.DraftEditor-root iframe[src^="//music.163.com"] {
+  min-height: auto;
+}
+*/
+
+/* 内容样式 end */
+
+.DraftEditor-root{
+  background-color: #fff;
+}
+
+.RichEditor-root {
+  background: #fff;
+  /* border: 1px solid #ddd; */
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  padding: 15px;
+}
+
+.RichEditor-editor {
+  padding:15px;
+}
+
+.RichEditor-editor .public-DraftEditorPlaceholder-root,
+.RichEditor-editor .public-DraftEditor-content {
+}
+
+.RichEditor-editor .public-DraftEditor-content {
+  min-height: 100px;
+}
+
+.RichEditor-hidePlaceholder .public-DraftEditorPlaceholder-root {
+  display: none;
+  color:rgb(227, 227, 227);
+}
+
+.public-DraftStyleDefault-block{
+  min-height: 22px;
+}
+
+.RichEditor-editor .RichEditor-blockquote {
+  border-left: 5px solid #eee;
+  color: #666;
+  font-family: 'Hoefler Text', 'Georgia', serif;
+  font-style: italic;
+  margin: 16px 0;
+  padding: 10px 20px;
+}
+
+.RichEditor-editor .public-DraftStyleDefault-pre {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: 'Inconsolata', 'Menlo', 'Consolas', monospace;
+  /*font-size: 18px;*/
+  padding: 20px;
+}
+
+.RichEditor-controls {
+  font-family: 'Helvetica', sans-serif;
+  /*font-size: 18px;*/
+  user-select: none;
+  background-color: #fff;
+  /* border-bottom:1px solid #efefef; */
+}
+
+.RichEditor-styleButton {
+  color: #999;
+  cursor: pointer;
+  display: inline-block;
+
+  padding:5px;
+  margin:5px 0 5px 10px;
+  /* border-radius: 3px; */
+}
+
+.RichEditor-styleButton:hover{
+  color: #999;
+  background-color: #efefef;
+}
+
+.RichEditor-activeButton {
+  background-color: #e3efff !important;
+  color:#fff !important;
+}
+
+
+
+
+/*
+.RichEditor-controls .title,
+.RichEditor-controls .blockquote,
+.RichEditor-controls .ul,
+.RichEditor-controls .ol,
+.RichEditor-controls .code-block,
+.RichEditor-controls .bold,
+.RichEditor-controls .italic,
+.RichEditor-controls .underline,
+.RichEditor-controls .image,
+.RichEditor-controls .link,
+.RichEditor-controls .video,
+.RichEditor-controls .music{
+  width:15px;
+  height: 15px;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.RichEditor-controls .title{
+  background-image: url(./images/editor-icon_03.png);
+}
+
+.RichEditor-controls .blockquote{
+  background-image: url(./images/editor-icon_06.png);
+}
+
+.RichEditor-controls .code-block{
+  background-image: url(./images/editor-icon_07.png);
+}
+
+.RichEditor-controls .bold{
+  background-image: url(./images/editor-icon_04.png);
+}
+
+.RichEditor-controls .italic{
+  background-image: url(./images/editor-icon_05.png);
+}
+
+.RichEditor-controls .underline{
+  background-image: url(./images/editor-icon_08.png);
+}
+
+.RichEditor-controls .ol{
+  background-image: url(./images/editor-icon_13.png);
+}
+
+
+
+.RichEditor-controls .ul{
+  background-image: url(./images/editor-icon_12.png);
+}
+
+.RichEditor-controls .image{
+  background-image: url(./images/editor-icon_10.png);
+}
+
+.RichEditor-controls .image .dropzone{
+  width: 25px !important;
+  height: 25px !important;
+  margin:-5px 0 0 -5px;
+}
+
+
+.RichEditor-controls .video{
+  background-image: url(./images/editor-icon_09.png);
+}
+
+
+.RichEditor-controls .link{
+  background-image: url(./images/editor-icon_11.png);
+}
+
+.RichEditor-controls .music{
+  background-image: url(./images/music.png);
+}
+*/
+
+/*************** 内容样式 ***************/
+
+
+.DraftEditor-root * { -webkit-user-select: text; font-size: 15px; }
+.DraftEditor-root h2{ font-size: 18px; margin:0px; padding:0px; }
+.DraftEditor-root figure{ margin:0; -webkit-user-modify: read-only !important; }
+.DraftEditor-root figure[contenteditable="false"]{ pointer-events:none; }
+.DraftEditor-root img{
+  max-width: 100%;
+  max-height: 600px;
+  background-image: url(data:image/gif;base64,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);
+  min-height: 30px;
+  min-width: 30px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #efefef;
+}
+.DraftEditor-root ul,
+.DraftEditor-root ol{ margin:0px; }
+.DraftEditor-root embed,
+.DraftEditor-root iframe{ width:100%; border:none; }
+.DraftEditor-root div,
+.DraftEditor-root span{ padding:0px; margin:0px; }
+
+.RichEditor-editor .RichEditor-blockquote {
+  border-left: 5px solid #c2c2c2;
+  color: #666;
+  padding: 10px 20px;
+  background-color: #f5f4f4;
+  margin:5px 0 5px 0;
+}
+
+.RichEditor-editor .public-DraftStyleDefault-pre {
+  background-color: #222;
+  overflow-x:scroll;
+  margin:5px 0 5px 0;
+  padding:10px 15px 10px 15px;
+  border-radius: 4px;
+  color:#a8ff60;
+  max-height: 400px;
+  max-width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  caret-color:#fff;
+  font-size: 14px;
+  overflow-x: auto;
+}
+  .public-DraftStyleDefault-pre pre{
+    color:#a8ff60;
+    margin:5px 0 5px 0;
+    padding:0px;
+  }
+
+.DraftEditor-root embed, .DraftEditor-root iframe{
+  min-height: 260px;
+}
+@media only screen and (max-width: 768px) {
+  .DraftEditor-root embed, .DraftEditor-root iframe{
+    min-height: 216px;
+  }
+}
+
+.DraftEditor-root iframe[src^="//music.163.com"] { min-height: auto; }
+
+/*************** 内容样式 end ***************/

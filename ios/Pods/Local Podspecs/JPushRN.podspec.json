@@ -1,0 +1,40 @@
+{
+  "name": "JPushRN",
+  "version": "2.2.8",
+  "homepage": "https://github.com/jpush/jpush-react-native",
+  "summary": "a jpush plugin for react native application",
+  "license": "ISC",
+  "authors": {
+    "huminios": "380108184@qq.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/jpush/jpush-react-native.git",
+    "tag": "2.2.8"
+  },
+  "source_files": "ios/RCTJPushModule/*.{h,m}",
+  "preserve_paths": "*.js",
+  "frameworks": [
+    "UIKit",
+    "CFNetwork",
+    "CoreFoundation",
+    "CoreTelephony",
+    "SystemConfiguration",
+    "CoreGraphics",
+    "Foundation",
+    "Security"
+  ],
+  "weak_frameworks": "UserNotifications",
+  "libraries": [
+    "z",
+    "resolv"
+  ],
+  "vendored_libraries": "ios/RCTJPushModule/*.a",
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}
