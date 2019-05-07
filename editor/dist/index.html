@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
   <!-- <title>小度鱼编辑器</title> -->
-<style>
+  <style>
 /**
  * Draft v0.10.5
  *
@@ -16,7 +16,7 @@
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  */
-.DraftEditor-editorContainer,.DraftEditor-root,.public-DraftEditor-content{height:inherit;text-align:initial}.public-DraftEditor-content[contenteditable=true]{-webkit-user-modify:read-write-plaintext-only}.DraftEditor-root{position:relative}.DraftEditor-editorContainer{background-color:rgba(255,255,255,0);border-left:.1px solid transparent;position:relative;z-index:1}.public-DraftEditor-block{position:relative}.DraftEditor-alignLeft .public-DraftStyleDefault-block{text-align:left}.DraftEditor-alignLeft .public-DraftEditorPlaceholder-root{left:0;text-align:left}.DraftEditor-alignCenter .public-DraftStyleDefault-block{text-align:center}.DraftEditor-alignCenter .public-DraftEditorPlaceholder-root{margin:0 auto;text-align:center;width:100%}.DraftEditor-alignRight .public-DraftStyleDefault-block{text-align:right}.DraftEditor-alignRight .public-DraftEditorPlaceholder-root{right:0;text-align:right}.public-DraftEditorPlaceholder-root{color:#9197a3;position:absolute;z-index:1}.public-DraftEditorPlaceholder-hasFocus{color:#bdc1c9}.DraftEditorPlaceholder-hidden{display:none}.public-DraftStyleDefault-block{position:relative;white-space:pre-wrap}.public-DraftStyleDefault-ltr{direction:ltr;text-align:left}.public-DraftStyleDefault-rtl{direction:rtl;text-align:right}.public-DraftStyleDefault-listLTR{direction:ltr}.public-DraftStyleDefault-listRTL{direction:rtl}.public-DraftStyleDefault-ol,.public-DraftStyleDefault-ul{margin:16px 0;padding:0}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listLTR{margin-left:1.5em}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listRTL{margin-right:1.5em}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-listLTR{margin-left:3em}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-listRTL{margin-right:3em}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-listLTR{margin-left:4.5em}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-listRTL{margin-right:4.5em}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-listLTR{margin-left:6em}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-listRTL{margin-right:6em}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-listLTR{margin-left:7.5em}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-listRTL{margin-right:7.5em}.public-DraftStyleDefault-unorderedListItem{list-style-type:square;position:relative}.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth0{list-style-type:disc}.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth1{list-style-type:circle}.public-DraftStyleDefault-orderedListItem{list-style-type:none;position:relative}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listLTR:before{left:-36px;position:absolute;text-align:right;width:30px}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listRTL:before{position:absolute;right:-36px;text-align:left;width:30px}.public-DraftStyleDefault-orderedListItem:before{content:counter(ol0) ". ";counter-increment:ol0}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth1:before{content:counter(ol1) ". ";counter-increment:ol1}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth2:before{content:counter(ol2) ". ";counter-increment:ol2}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth3:before{content:counter(ol3) ". ";counter-increment:ol3}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth4:before{content:counter(ol4) ". ";counter-increment:ol4}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-reset{counter-reset:ol0}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-reset{counter-reset:ol1}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-reset{counter-reset:ol2}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-reset{counter-reset:ol3}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-reset{counter-reset:ol4}
+ .DraftEditor-editorContainer,.DraftEditor-root,.public-DraftEditor-content{height:inherit;text-align:initial}.public-DraftEditor-content[contenteditable=true]{-webkit-user-modify:read-write-plaintext-only}.DraftEditor-root{position:relative}.DraftEditor-editorContainer{background-color:rgba(255,255,255,0);border-left:.1px solid transparent;position:relative;z-index:1}.public-DraftEditor-block{position:relative}.DraftEditor-alignLeft .public-DraftStyleDefault-block{text-align:left}.DraftEditor-alignLeft .public-DraftEditorPlaceholder-root{left:0;text-align:left}.DraftEditor-alignCenter .public-DraftStyleDefault-block{text-align:center}.DraftEditor-alignCenter .public-DraftEditorPlaceholder-root{margin:0 auto;text-align:center;width:100%}.DraftEditor-alignRight .public-DraftStyleDefault-block{text-align:right}.DraftEditor-alignRight .public-DraftEditorPlaceholder-root{right:0;text-align:right}.public-DraftEditorPlaceholder-root{color:#9197a3;position:absolute;z-index:1}.public-DraftEditorPlaceholder-hasFocus{color:#bdc1c9}.DraftEditorPlaceholder-hidden{display:none}.public-DraftStyleDefault-block{position:relative;white-space:pre-wrap}.public-DraftStyleDefault-ltr{direction:ltr;text-align:left}.public-DraftStyleDefault-rtl{direction:rtl;text-align:right}.public-DraftStyleDefault-listLTR{direction:ltr}.public-DraftStyleDefault-listRTL{direction:rtl}.public-DraftStyleDefault-ol,.public-DraftStyleDefault-ul{margin:16px 0;padding:0}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listLTR{margin-left:1.5em}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listRTL{margin-right:1.5em}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-listLTR{margin-left:3em}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-listRTL{margin-right:3em}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-listLTR{margin-left:4.5em}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-listRTL{margin-right:4.5em}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-listLTR{margin-left:6em}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-listRTL{margin-right:6em}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-listLTR{margin-left:7.5em}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-listRTL{margin-right:7.5em}.public-DraftStyleDefault-unorderedListItem{list-style-type:square;position:relative}.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth0{list-style-type:disc}.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth1{list-style-type:circle}.public-DraftStyleDefault-orderedListItem{list-style-type:none;position:relative}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listLTR:before{left:-36px;position:absolute;text-align:right;width:30px}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listRTL:before{position:absolute;right:-36px;text-align:left;width:30px}.public-DraftStyleDefault-orderedListItem:before{content:counter(ol0) ". ";counter-increment:ol0}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth1:before{content:counter(ol1) ". ";counter-increment:ol1}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth2:before{content:counter(ol2) ". ";counter-increment:ol2}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth3:before{content:counter(ol3) ". ";counter-increment:ol3}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth4:before{content:counter(ol4) ". ";counter-increment:ol4}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-reset{counter-reset:ol0}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-reset{counter-reset:ol1}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-reset{counter-reset:ol2}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-reset{counter-reset:ol3}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-reset{counter-reset:ol4}
 
 html, body{
   /* padding: 5px 5px 5px 5px; */
@@ -298,7 +298,8 @@ html, body{
 
 /*************** 内容样式 end ***************/
 
-</style>
+  </style>
+</head>
 <body>
   <div id="app"></div>
 <script type="text/javascript">/******/ (function(modules) { // webpackBootstrap
@@ -5617,7 +5618,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -5663,7 +5664,7 @@ module.exports = reactProdInvariant;
  *
  * @providesModule EditorState
  * @format
- *
+ * 
  */
 
 
@@ -6469,7 +6470,7 @@ module.exports = ExecutionEnvironment;
  *
  * @providesModule DraftModifier
  * @format
- *
+ * 
  */
 
 
@@ -6636,7 +6637,7 @@ module.exports = DraftModifier;
  *
  * @providesModule CharacterMetadata
  * @format
- *
+ * 
  */
 
 
@@ -6768,7 +6769,7 @@ module.exports = CharacterMetadata;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 function makeEmptyFunction(arg) {
@@ -6810,7 +6811,7 @@ module.exports = emptyFunction;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -7198,7 +7199,7 @@ module.exports = ReactComponentTreeHook;
  *
  * @providesModule ContentBlockNode
  * @format
- *
+ * 
  *
  * This file is a fork of ContentBlock adding support for nesting references by
  * providing links to children, parent, prevSibling, and nextSibling.
@@ -7369,7 +7370,7 @@ module.exports = ContentBlockNode;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -7399,7 +7400,7 @@ module.exports = { debugTool: debugTool };
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 var nullthrows = function nullthrows(x) {
@@ -7930,7 +7931,7 @@ module.exports = ReactUpdates;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -7967,7 +7968,7 @@ module.exports = ReactCurrentOwner;
  *
  * @providesModule generateRandomKey
  * @format
- *
+ * 
  */
 
 
@@ -8303,7 +8304,7 @@ module.exports = g;
  *
  * @providesModule DraftFeatureFlags
  * @format
- *
+ * 
  */
 
 
@@ -8542,7 +8543,7 @@ module.exports = DOMProperty;
  *
  * @providesModule ContentBlock
  * @format
- *
+ * 
  */
 
 
@@ -8914,7 +8915,7 @@ module.exports = UnicodeUtils;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -9392,7 +9393,7 @@ module.exports = __webpack_require__(256);
  *
  * @providesModule SelectionState
  * @format
- *
+ * 
  */
 
 
@@ -10023,7 +10024,7 @@ module.exports = React;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -10069,7 +10070,7 @@ module.exports = reactProdInvariant;
  *
  * @providesModule BlockMapBuilder
  * @format
- *
+ * 
  */
 
 
@@ -10103,7 +10104,7 @@ module.exports = BlockMapBuilder;
  *
  * @providesModule findRangesImmutable
  * @format
- *
+ * 
  */
 
 
@@ -10153,7 +10154,7 @@ module.exports = findRangesImmutable;
  *
  * @providesModule isEventHandled
  * @format
- *
+ * 
  */
 
 
@@ -10184,7 +10185,7 @@ module.exports = isEventHandled;
  *
  * @providesModule removeTextWithStrategy
  * @format
- *
+ * 
  */
 
 
@@ -10784,7 +10785,7 @@ var _extends = _assign || function (target) {
  *
  * @providesModule DraftEntity
  * @format
- *
+ * 
  */
 
 var DraftEntityInstance = __webpack_require__(88);
@@ -10978,7 +10979,7 @@ module.exports = DraftEntity;
  *
  * @providesModule DraftOffsetKey
  * @format
- *
+ * 
  */
 
 
@@ -11021,7 +11022,7 @@ module.exports = DraftOffsetKey;
  *
  * @providesModule getContentStateFragment
  * @format
- *
+ * 
  */
 
 
@@ -11089,7 +11090,7 @@ module.exports = getContentStateFragment;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 var isTextNode = __webpack_require__(235);
@@ -11199,7 +11200,7 @@ module.exports = getActiveElement;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -11864,7 +11865,7 @@ module.exports = SyntheticMouseEvent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -12328,7 +12329,7 @@ module.exports = setInnerHTML;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -12362,7 +12363,7 @@ module.exports = canDefineProperty;
  *
  * @providesModule ContentState
  * @format
- *
+ * 
  */
 
 
@@ -12579,7 +12580,7 @@ module.exports = ContentState;
  *
  * @providesModule DefaultDraftBlockRenderMap
  * @format
- *
+ * 
  */
 
 
@@ -12655,7 +12656,7 @@ module.exports = DefaultDraftBlockRenderMap;
  *
  * @providesModule KeyBindingUtil
  * @format
- *
+ * 
  */
 
 
@@ -12700,7 +12701,7 @@ module.exports = KeyBindingUtil;
  *
  * @providesModule findAncestorOffsetKey
  * @format
- *
+ * 
  */
 
 
@@ -12739,7 +12740,7 @@ module.exports = findAncestorOffsetKey;
  *
  * @providesModule getEntityKeyForSelection
  * @format
- *
+ * 
  */
 
 
@@ -12804,7 +12805,7 @@ module.exports = getEntityKeyForSelection;
  *
  * @providesModule moveSelectionBackward
  * @format
- *
+ * 
  */
 
 
@@ -12864,7 +12865,7 @@ module.exports = moveSelectionBackward;
  *
  * @providesModule sanitizeDraftText
  * @format
- *
+ * 
  */
 
 
@@ -12997,7 +12998,7 @@ module.exports = Style;
  * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
- *
+ * 
  */
 
 /**
@@ -13161,7 +13162,7 @@ module.exports = getScrollPosition;
  * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
- *
+ * 
  */
 
 /*eslint-disable no-self-compare */
@@ -13724,7 +13725,7 @@ module.exports = EventPluginUtils;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -13932,7 +13933,7 @@ module.exports = LinkedValueUtils;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -13982,7 +13983,7 @@ module.exports = ReactComponentEnvironment;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -15050,7 +15051,7 @@ module.exports = lowPriorityWarning;
  *
  * @providesModule BlockTree
  * @format
- *
+ * 
  */
 
 
@@ -15168,7 +15169,7 @@ module.exports = BlockTree;
  *
  * @providesModule DefaultDraftInlineStyle
  * @format
- *
+ * 
  */
 
 
@@ -15211,7 +15212,7 @@ module.exports = {
  *
  * @providesModule DraftEditorBlock.react
  * @format
- *
+ * 
  */
 
 
@@ -15438,7 +15439,7 @@ module.exports = DraftEditorBlock;
  * @providesModule DraftEntityInstance
  * @legacyServerCallableInstance
  * @format
- *
+ * 
  */
 
 
@@ -15526,7 +15527,7 @@ module.exports = DraftEntityInstance;
  *
  * @providesModule DraftRemovableWord
  * @format
- *
+ * 
  */
 
 
@@ -15583,7 +15584,7 @@ module.exports = DraftRemovableWord;
  *
  * @providesModule DraftStringKey
  * @format
- *
+ * 
  */
 
 
@@ -15615,7 +15616,7 @@ module.exports = DraftStringKey;
  *
  * @providesModule RichTextEditorUtil
  * @format
- *
+ * 
  */
 
 
@@ -15931,7 +15932,7 @@ module.exports = RichTextEditorUtil;
  *
  * @providesModule convertFromHTMLToContentBlocks
  * @format
- *
+ * 
  */
 
 
@@ -16601,7 +16602,7 @@ module.exports = convertFromHTMLtoContentBlocks;
  *
  * @providesModule getDefaultKeyBinding
  * @format
- *
+ * 
  */
 
 
@@ -16730,7 +16731,7 @@ module.exports = getDefaultKeyBinding;
  *
  * @providesModule getDraftEditorSelectionWithNodes
  * @format
- *
+ * 
  */
 
 
@@ -16920,7 +16921,7 @@ module.exports = getDraftEditorSelectionWithNodes;
  *
  * @providesModule getFragmentFromSelection
  * @format
- *
+ * 
  */
 
 
@@ -16956,7 +16957,7 @@ module.exports = getFragmentFromSelection;
  *
  * @providesModule getNextDelimiterBlockKey
  * @format
- *
+ * 
  *
  * This is unstable and not part of the public API and should not be used by
  * production systems. This file may be update/removed without notice.
@@ -17013,7 +17014,7 @@ module.exports = getNextDelimiterBlockKey;
  *
  * @providesModule getRangeClientRects
  * @format
- *
+ * 
  */
 
 
@@ -17083,7 +17084,7 @@ module.exports = getRangeClientRects;
  *
  * @providesModule getSafeBodyFromHTML
  * @format
- *
+ * 
  */
 
 
@@ -17129,7 +17130,7 @@ module.exports = getSafeBodyFromHTML;
  *
  * @providesModule getSelectionOffsetKeyForNode
  * @format
- *
+ * 
  */
 
 
@@ -17172,7 +17173,7 @@ module.exports = getSelectionOffsetKeyForNode;
  *
  * @providesModule getTextContentFromFiles
  * @format
- *
+ * 
  */
 
 
@@ -17259,7 +17260,7 @@ module.exports = getTextContentFromFiles;
  *
  * @providesModule getUpdatedSelectionState
  * @format
- *
+ * 
  */
 
 
@@ -17342,7 +17343,7 @@ module.exports = getUpdatedSelectionState;
  *
  * @providesModule insertIntoList
  * @format
- *
+ * 
  */
 
 
@@ -17385,7 +17386,7 @@ module.exports = insertIntoList;
  *
  * @providesModule isSelectionAtLeafStart
  * @format
- *
+ * 
  */
 
 
@@ -17439,7 +17440,7 @@ module.exports = isSelectionAtLeafStart;
  *
  * @providesModule moveSelectionForward
  * @format
- *
+ * 
  */
 
 
@@ -17491,7 +17492,7 @@ module.exports = moveSelectionForward;
  *
  * @providesModule randomizeBlockMapKeys
  * @format
- *
+ * 
  */
 
 
@@ -17609,7 +17610,7 @@ module.exports = randomizeBlockMapKeys;
  *
  * @providesModule removeEntitiesAtEdges
  * @format
- *
+ * 
  */
 
 
@@ -18108,7 +18109,7 @@ module.exports = Scroll;
  * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
- *
+ * 
  */
 
 /**
@@ -18544,7 +18545,7 @@ module.exports = hyphenate;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  * @typechecks static-only
  */
 
@@ -18782,7 +18783,7 @@ module.exports = CSSProperty;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -19412,7 +19413,7 @@ module.exports = ReactEmptyComponent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -20185,7 +20186,7 @@ module.exports = ReactMount;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -20231,7 +20232,7 @@ module.exports = ReactNodeTypes;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -20283,7 +20284,7 @@ module.exports = ViewportMetrics;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -20347,7 +20348,7 @@ module.exports = accumulateInto;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -20720,7 +20721,7 @@ module.exports = instantiateReactComponent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -21168,7 +21169,7 @@ module.exports = {
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -21557,7 +21558,7 @@ module.exports = ReactNoopUpdateQueue;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -21821,7 +21822,7 @@ exports.default = RawParser;
  *
  * @providesModule Draft
  * @format
- *
+ * 
  */
 
 
@@ -22874,7 +22875,7 @@ module.exports = factory;
  *
  * @providesModule AtomicBlockUtils
  * @format
- *
+ * 
  */
 
 
@@ -23016,7 +23017,7 @@ module.exports = AtomicBlockUtils;
  *
  * @providesModule CompositeDraftDecorator
  * @format
- *
+ * 
  */
 
 
@@ -23138,7 +23139,7 @@ module.exports = CompositeDraftDecorator;
  *
  * @providesModule ContentStateInlineStyle
  * @format
- *
+ * 
  */
 
 
@@ -23216,7 +23217,7 @@ module.exports = ContentStateInlineStyle;
  *
  * @providesModule DraftEditor.react
  * @format
- *
+ * 
  * @preventMunge
  */
 
@@ -23691,7 +23692,7 @@ module.exports = DraftEditor;
  *
  * @providesModule DraftEditorCompositionHandler
  * @format
- *
+ * 
  */
 
 
@@ -23872,7 +23873,7 @@ module.exports = DraftEditorCompositionHandler;
  *
  * @providesModule DraftEditorContents-core.react
  * @format
- *
+ * 
  */
 
 
@@ -24145,7 +24146,7 @@ module.exports = DraftEditorContents;
  *
  * @providesModule DraftEditorContents.react
  * @format
- *
+ * 
  */
 
 
@@ -24169,7 +24170,7 @@ module.exports = DraftEditorContents;
  *
  * @providesModule DraftEditorDragHandler
  * @format
- *
+ * 
  */
 
 
@@ -24289,7 +24290,7 @@ module.exports = DraftEditorDragHandler;
  *
  * @providesModule DraftEditorEditHandler
  * @format
- *
+ * 
  */
 
 
@@ -24339,7 +24340,7 @@ module.exports = DraftEditorEditHandler;
  *
  * @providesModule DraftEditorLeaf.react
  * @format
- *
+ * 
  */
 
 
@@ -24522,7 +24523,7 @@ module.exports = DraftEditorLeaf;
  *
  * @providesModule DraftEditorPlaceholder.react
  * @format
- *
+ * 
  */
 
 
@@ -24608,7 +24609,7 @@ module.exports = DraftEditorPlaceholder;
  *
  * @providesModule DraftEditorTextNode.react
  * @format
- *
+ * 
  */
 
 
@@ -24732,7 +24733,7 @@ module.exports = DraftEditorTextNode;
  *
  * @providesModule DraftEntitySegments
  * @format
- *
+ * 
  */
 
 
@@ -24838,7 +24839,7 @@ module.exports = DraftEntitySegments;
  *
  * @providesModule DraftFeatureFlags-core
  * @format
- *
+ * 
  */
 
 
@@ -24891,7 +24892,7 @@ module.exports = {
  *
  * @providesModule DraftPasteProcessor
  * @format
- *
+ * 
  */
 
 
@@ -24991,7 +24992,7 @@ var _extends = _assign || function (target) {
  *
  * @providesModule DraftTreeAdapter
  * @format
- *
+ * 
  *
  * This is unstable and not part of the public API and should not be used by
  * production systems. This file may be update/removed without notice.
@@ -25134,7 +25135,7 @@ module.exports = DraftTreeAdapter;
  *
  * @providesModule EditorBidiService
  * @format
- *
+ * 
  */
 
 
@@ -25187,7 +25188,7 @@ module.exports = EditorBidiService;
  *
  * @providesModule SecondaryClipboard
  * @format
- *
+ * 
  */
 
 
@@ -25263,7 +25264,7 @@ module.exports = SecondaryClipboard;
  *
  * @providesModule adjustBlockDepthForContentState
  * @format
- *
+ * 
  */
 
 
@@ -25308,7 +25309,7 @@ module.exports = adjustBlockDepthForContentState;
  *
  * @providesModule applyEntityToContentBlock
  * @format
- *
+ * 
  */
 
 
@@ -25341,7 +25342,7 @@ module.exports = applyEntityToContentBlock;
  *
  * @providesModule applyEntityToContentState
  * @format
- *
+ * 
  */
 
 
@@ -25391,7 +25392,7 @@ module.exports = applyEntityToContentState;
  *
  * @providesModule convertFromDraftStateToRaw
  * @format
- *
+ * 
  */
 
 
@@ -25544,7 +25545,7 @@ module.exports = convertFromDraftStateToRaw;
  *
  * @providesModule convertFromRawToDraftState
  * @format
- *
+ * 
  */
 
 
@@ -25784,7 +25785,7 @@ module.exports = convertFromRawToDraftState;
  *
  * @providesModule createCharacterList
  * @format
- *
+ * 
  */
 
 
@@ -25819,7 +25820,7 @@ module.exports = createCharacterList;
  *
  * @providesModule decodeEntityRanges
  * @format
- *
+ * 
  */
 
 
@@ -25865,7 +25866,7 @@ module.exports = decodeEntityRanges;
  *
  * @providesModule decodeInlineStyleRanges
  * @format
- *
+ * 
  */
 
 
@@ -25914,7 +25915,7 @@ module.exports = decodeInlineStyleRanges;
  *
  * @providesModule editOnBeforeInput
  * @format
- *
+ * 
  */
 
 
@@ -26091,7 +26092,7 @@ module.exports = editOnBeforeInput;
  *
  * @providesModule editOnBlur
  * @format
- *
+ * 
  */
 
 
@@ -26147,7 +26148,7 @@ module.exports = editOnBlur;
  *
  * @providesModule editOnCompositionStart
  * @format
- *
+ * 
  */
 
 
@@ -26182,7 +26183,7 @@ module.exports = editOnCompositionStart;
  *
  * @providesModule editOnCopy
  * @format
- *
+ * 
  */
 
 
@@ -26224,7 +26225,7 @@ module.exports = editOnCopy;
  *
  * @providesModule editOnCut
  * @format
- *
+ * 
  */
 
 
@@ -26299,7 +26300,7 @@ module.exports = editOnCut;
  *
  * @providesModule editOnDragOver
  * @format
- *
+ * 
  */
 
 
@@ -26331,7 +26332,7 @@ module.exports = editOnDragOver;
  *
  * @providesModule editOnDragStart
  * @format
- *
+ * 
  */
 
 
@@ -26362,7 +26363,7 @@ module.exports = editOnDragStart;
  *
  * @providesModule editOnFocus
  * @format
- *
+ * 
  */
 
 
@@ -26414,7 +26415,7 @@ module.exports = editOnFocus;
  *
  * @providesModule editOnInput
  * @format
- *
+ * 
  */
 
 
@@ -26593,7 +26594,7 @@ module.exports = editOnInput;
  *
  * @providesModule editOnKeyDown
  * @format
- *
+ * 
  */
 
 
@@ -26753,7 +26754,7 @@ module.exports = editOnKeyDown;
  *
  * @providesModule editOnPaste
  * @format
- *
+ * 
  */
 
 
@@ -26924,7 +26925,7 @@ module.exports = editOnPaste;
  *
  * @providesModule editOnSelect
  * @format
- *
+ * 
  */
 
 
@@ -26975,7 +26976,7 @@ module.exports = editOnSelect;
  *
  * @providesModule encodeEntityRanges
  * @format
- *
+ * 
  */
 
 
@@ -27023,7 +27024,7 @@ module.exports = encodeEntityRanges;
  *
  * @providesModule encodeInlineStyleRanges
  * @format
- *
+ * 
  */
 
 
@@ -27100,7 +27101,7 @@ module.exports = encodeInlineStyleRanges;
  *
  * @providesModule expandRangeToStartOfLine
  * @format
- *
+ * 
  */
 
 var UnicodeUtils = __webpack_require__(26);
@@ -27297,7 +27298,7 @@ module.exports = expandRangeToStartOfLine;
  *
  * @providesModule getCharacterRemovalRange
  * @format
- *
+ * 
  */
 
 
@@ -27419,7 +27420,7 @@ module.exports = getCharacterRemovalRange;
  *
  * @providesModule getDraftEditorSelection
  * @format
- *
+ * 
  */
 
 
@@ -27462,7 +27463,7 @@ module.exports = getDraftEditorSelection;
  *
  * @providesModule getRangeBoundingClientRect
  * @format
- *
+ * 
  */
 
 
@@ -27539,7 +27540,7 @@ module.exports = getRangeBoundingClientRect;
  *
  * @providesModule getRangesForDraftEntity
  * @format
- *
+ * 
  */
 
 
@@ -27585,7 +27586,7 @@ module.exports = getRangesForDraftEntity;
  *
  * @providesModule getVisibleSelectionRect
  * @format
- *
+ * 
  */
 
 
@@ -27638,7 +27639,7 @@ module.exports = getVisibleSelectionRect;
  *
  * @providesModule insertFragmentIntoContentState
  * @format
- *
+ * 
  */
 
 
@@ -27895,7 +27896,7 @@ module.exports = insertFragmentIntoContentState;
  *
  * @providesModule insertTextIntoContentState
  * @format
- *
+ * 
  */
 
 
@@ -27955,7 +27956,7 @@ module.exports = insertTextIntoContentState;
  *
  * @providesModule keyCommandBackspaceToStartOfLine
  * @format
- *
+ * 
  */
 
 
@@ -28006,7 +28007,7 @@ module.exports = keyCommandBackspaceToStartOfLine;
  *
  * @providesModule keyCommandBackspaceWord
  * @format
- *
+ * 
  */
 
 
@@ -28060,7 +28061,7 @@ module.exports = keyCommandBackspaceWord;
  *
  * @providesModule keyCommandDeleteWord
  * @format
- *
+ * 
  */
 
 
@@ -28112,7 +28113,7 @@ module.exports = keyCommandDeleteWord;
  *
  * @providesModule keyCommandInsertNewline
  * @format
- *
+ * 
  */
 
 
@@ -28142,7 +28143,7 @@ module.exports = keyCommandInsertNewline;
  *
  * @providesModule keyCommandMoveSelectionToEndOfBlock
  * @format
- *
+ * 
  */
 
 
@@ -28186,7 +28187,7 @@ module.exports = keyCommandMoveSelectionToEndOfBlock;
  *
  * @providesModule keyCommandMoveSelectionToStartOfBlock
  * @format
- *
+ * 
  */
 
 
@@ -28230,7 +28231,7 @@ module.exports = keyCommandMoveSelectionToStartOfBlock;
  *
  * @providesModule keyCommandPlainBackspace
  * @format
- *
+ * 
  */
 
 
@@ -28281,7 +28282,7 @@ module.exports = keyCommandPlainBackspace;
  *
  * @providesModule keyCommandPlainDelete
  * @format
- *
+ * 
  */
 
 
@@ -28333,7 +28334,7 @@ module.exports = keyCommandPlainDelete;
  *
  * @providesModule keyCommandTransposeCharacters
  * @format
- *
+ * 
  */
 
 
@@ -28418,7 +28419,7 @@ module.exports = keyCommandTransposeCharacters;
  *
  * @providesModule keyCommandUndo
  * @format
- *
+ * 
  */
 
 
@@ -28473,7 +28474,7 @@ module.exports = keyCommandUndo;
  *
  * @providesModule modifyBlockForContentState
  * @format
- *
+ * 
  */
 
 
@@ -28516,7 +28517,7 @@ module.exports = modifyBlockForContentState;
  *
  * @providesModule moveBlockInContentState
  * @format
- *
+ * 
  */
 
 
@@ -28715,7 +28716,7 @@ module.exports = moveBlockInContentState;
  *
  * @providesModule removeRangeFromContentState
  * @format
- *
+ * 
  */
 
 
@@ -29026,7 +29027,7 @@ module.exports = removeRangeFromContentState;
  *
  * @providesModule setDraftEditorSelection
  * @format
- *
+ * 
  */
 
 
@@ -29278,7 +29279,7 @@ module.exports = setDraftEditorSelection;
  *
  * @providesModule splitBlockInContentState
  * @format
- *
+ * 
  */
 
 
@@ -29415,7 +29416,7 @@ module.exports = splitBlockInContentState;
  *
  * @providesModule splitTextIntoTextBlocks
  * @format
- *
+ * 
  */
 
 
@@ -29474,7 +29475,7 @@ module.exports = PhotosMimeType;
  *
  * @typechecks
  * @stub
- *
+ * 
  */
 
 
@@ -29513,7 +29514,7 @@ module.exports = {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 
@@ -29552,7 +29553,7 @@ module.exports = URI;
  * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
- *
+ * 
  */
 
 /**
@@ -30561,7 +30562,7 @@ function getViewportWidth() {
    * This source code is licensed under the MIT license found in the
    * LICENSE file in the root directory of this source tree.
    *
-   *
+   * 
    * @typechecks
    */
 
@@ -36873,7 +36874,7 @@ module.exports = ReactDOMUnknownPropertyHook;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -37406,7 +37407,7 @@ module.exports = {
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -37628,7 +37629,7 @@ module.exports = ReactEventListener;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -37706,7 +37707,7 @@ module.exports = ReactInjection;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -38256,7 +38257,7 @@ module.exports = ReactMultiChild;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -38355,7 +38356,7 @@ module.exports = ReactOwner;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -38570,7 +38571,7 @@ module.exports = ReactReconcileTransaction;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -38762,7 +38763,7 @@ module.exports = ReactServerRenderingTransaction;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -39425,7 +39426,7 @@ module.exports = SelectEventPlugin;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -40148,7 +40149,7 @@ module.exports = SyntheticWheelEvent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -40443,7 +40444,7 @@ module.exports = findDOMNode;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -40644,7 +40645,7 @@ module.exports = getEventKey;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -40927,7 +40928,7 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -40991,7 +40992,7 @@ module.exports = KeyEscapeUtils;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -41479,7 +41480,7 @@ module.exports = ReactDOMFactories;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -41534,7 +41535,7 @@ module.exports = factory(isValidElement);
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -41698,7 +41699,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -44267,57 +44268,92 @@ var MyEditor = exports.MyEditor = function (_React$Component2) {
       this.onChange(this.state.editorState);
       this.props.getEditor(this.refs.editor);
 
-      setTimeout(function () {
+      // alert('11112222');
 
-        WebViewBridge.onMessage = function (message) {
+      // setTimeout(()=>{
 
-          message = decodeURIComponent(message);
-          message = JSON.parse(message);
+      var onMessage = function onMessage(message) {
 
-          switch (message.type) {
-            case 'focus':
-              self.refs.editor.focus();
-              break;
-            case 'blur':
-              self.refs.editor.blur();
-              break;
-            case 'placeholder':
-              self.setState({ placeholder: message.data });
-              break;
-            case 'set-content':
+        message = decodeURIComponent(message);
+        // alert(message);
+        message = JSON.parse(message);
 
-              var decorator = new _draftJs.CompositeDecorator([{
-                strategy: findLinkEntities,
-                component: Link
-              }]);
+        switch (message.type) {
+          case 'focus':
+            self.refs.editor.focus();
+            break;
+          case 'blur':
+            self.refs.editor.blur();
+            break;
+          case 'placeholder':
+            self.setState({ placeholder: message.data });
+            break;
+          case 'set-content':
 
-              /*
-              self.setState({
-                editorState: EditorState.createWithContent(convertFromRaw(message.data), decorator)
-              });
-              */
+            var decorator = new _draftJs.CompositeDecorator([{
+              strategy: findLinkEntities,
+              component: Link
+            }]);
 
-              self._onChange(_draftJs.EditorState.createWithContent((0, _draftJs.convertFromRaw)(message.data), decorator));
-              break;
-            case 'add-image-placeholder':
-              self.addImage(message.data);
-              // self.addImage([{
-              //   name: message.data.name,
-              //   src: message.data.src
-              // }]);
-              break;
+            /*
+            self.setState({
+              editorState: EditorState.createWithContent(convertFromRaw(message.data), decorator)
+            });
+            */
 
-            case 'add-image':
-              self.updateImage(message.data.src, message.data.name);
-              break;
+            self._onChange(_draftJs.EditorState.createWithContent((0, _draftJs.convertFromRaw)(message.data), decorator));
+            break;
+          case 'add-image-placeholder':
+            // alert('1111');
+            self.addImage(message.data);
+            // self.addImage([{
+            //   name: message.data.name,
+            //   src: message.data.src
+            // }]);
+            break;
 
-          }
-        };
-      }, 300);
+          case 'add-image':
+
+            self.updateImage(message.data.src, message.data.name);
+            break;
+
+        }
+      };
+
+      var eventListener = function eventListener(e) {
+
+        if (e.data && e.data.type) {} else if (e.data) {
+          // alert(e.data);
+          onMessage(e.data);
+          // window.ReactNativeWebView.postMessage('hi! RN');
+        }
+      };
+
+      var u = navigator.userAgent;
+      // alert(window.addEventListener);
+      var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+      var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+      // let eventListener = document.addEventListener;
+
+      if (isAndroid) {
+        document.addEventListener('message', eventListener);
+      } else {
+        window.addEventListener('message', eventListener);
+      }
+
+      // }, 300);
+    }
+  }, {
+    key: 'postMessage',
+    value: function postMessage(data) {
+      // WebViewBridge.send(JSON.stringify(data));
+      window.ReactNativeWebView.postMessage(JSON.stringify(data));
     }
   }, {
     key: '_onChange',
     value: function _onChange(editorState) {
+      var _this3 = this;
 
       var that = this;
 
@@ -44340,25 +44376,25 @@ var MyEditor = exports.MyEditor = function (_React$Component2) {
         _html = _html.replace(/<\/p>/gmi, '');
 
         if (!_html) {
-          WebViewBridge.send(JSON.stringify({
+          _this3.postMessage({
             type: 'onchange',
             data: {
               json: '',
               html: ''
             }
-          }));
+          });
           // RNMessageChannel.sendJSON({ josn: '', html: '' })
           // RNMessageChannel.emit('transport-content', { json: '', html: '' })
           return;
         }
 
-        WebViewBridge.send(JSON.stringify({
+        _this3.postMessage({
           type: 'onchange',
           data: {
             json: JSON.stringify((0, _draftJs.convertToRaw)(content)),
             html: html
           }
-        }));
+        });
 
         // RNMessageChannel.emit('transport-content', { json: JSON.stringify(convertToRaw(content)), html })
         // RNMessageChannel.sendJSON({ josn: JSON.stringify(convertToRaw(content)), html: html })
@@ -44459,6 +44495,7 @@ var MyEditor = exports.MyEditor = function (_React$Component2) {
   }, {
     key: '_updateImage',
     value: function _updateImage(url, name) {
+      var _this4 = this;
 
       var self = this;
       var editorState = self.state.editorState;
@@ -44492,9 +44529,9 @@ var MyEditor = exports.MyEditor = function (_React$Component2) {
 
         // 判断是否全部上传完成，
         if (self.checkUpload()) {
-          WebViewBridge.send(JSON.stringify({
+          _this4.postMessage({
             type: 'uploaded'
-          }));
+          });
         }
       });
     }
@@ -44639,8 +44676,9 @@ var MyEditor = exports.MyEditor = function (_React$Component2) {
             editorState: editorState,
             blockStyleFn: getBlockStyle,
             onChange: this.onChange,
-            handleKeyCommand: this.handleKeyCommand,
-            placeholder: placeholder,
+            handleKeyCommand: this.handleKeyCommand
+            // placeholder={'hahahaha...'}
+            , placeholder: placeholder,
             ref: 'editor',
             stripPastedStyles: true,
             spellCheck: true

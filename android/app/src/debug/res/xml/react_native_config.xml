@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <!-- <base-config cleartextTrafficPermitted="true" /> -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+  <!-- 
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="false">localhost</domain>
+    <domain includeSubdomains="false">192.168.1.4</domain>
+    <domain includeSubdomains="false">beacon-api.aliyuncs.com</domain>
+    <domain includeSubdomains="false">cgi.connect.qq.com</domain>
+    <domain includeSubdomains="false">pingma.qq.com</domain>
+    <domain includeSubdomains="false">msgacs.m.taobao.com</domain>
+  </domain-config>
+  -->
+
+</network-security-config>

@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const config = require('../config/index.js');
+const config = require('../app/config/index.js');
 
 module.exports = {
   entry: './src/index.js',

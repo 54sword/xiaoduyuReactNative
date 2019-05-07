@@ -396,11 +396,15 @@ export class MyEditor extends React.Component {
     this.onChange(this.state.editorState);
     this.props.getEditor(this.refs.editor);
 
-    setTimeout(()=>{
+    // alert('11112222');
 
-      WebViewBridge.onMessage = function (message) {
+    // setTimeout(()=>{
+
+      let onMessage = function (message) {
+
 
         message = decodeURIComponent(message);
+        // alert(message);
         message = JSON.parse(message);
 
         switch (message.type) {
@@ -431,6 +435,7 @@ export class MyEditor extends React.Component {
             self._onChange(EditorState.createWithContent(convertFromRaw(message.data), decorator));
             break;
           case 'add-image-placeholder':
+            // alert('1111');
             self.addImage(message.data);
             // self.addImage([{
             //   name: message.data.name,
@@ -439,6 +444,7 @@ export class MyEditor extends React.Component {
             break;
 
           case 'add-image':
+            
             self.updateImage(message.data.src, message.data.name);
             break;
 
@@ -446,8 +452,38 @@ export class MyEditor extends React.Component {
 
       };
 
-    }, 300);
 
+      let eventListener = function (e) {
+
+        if (e.data && e.data.type) {
+        } else if (e.data) {
+          // alert(e.data);
+          onMessage(e.data)
+          // window.ReactNativeWebView.postMessage('hi! RN');
+        }
+
+      }
+
+      var u = navigator.userAgent;
+      // alert(window.addEventListener);
+      var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+      var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+      // let eventListener = document.addEventListener;
+
+      if (isAndroid) {
+        document.addEventListener('message', eventListener)
+      } else {
+        window.addEventListener('message', eventListener)
+      }
+
+    // }, 300);
+
+  }
+
+  postMessage(data) {
+    // WebViewBridge.send(JSON.stringify(data));
+    window.ReactNativeWebView.postMessage(JSON.stringify(data));
   }
 
   _onChange(editorState) {
@@ -472,25 +508,25 @@ export class MyEditor extends React.Component {
           _html = _html.replace(/<\/p>/gmi, '')
 
       if (!_html) {
-        WebViewBridge.send(JSON.stringify({
+        this.postMessage({
           type: 'onchange',
           data: {
             json: '',
             html: ''
           }
-        }));
+        });
         // RNMessageChannel.sendJSON({ josn: '', html: '' })
         // RNMessageChannel.emit('transport-content', { json: '', html: '' })
         return
       }
 
-      WebViewBridge.send(JSON.stringify({
+      this.postMessage({
         type: 'onchange',
         data: {
           json: JSON.stringify(convertToRaw(content)),
           html
         }
-      }));
+      });
 
       // RNMessageChannel.emit('transport-content', { json: JSON.stringify(convertToRaw(content)), html })
       // RNMessageChannel.sendJSON({ josn: JSON.stringify(convertToRaw(content)), html: html })
@@ -645,9 +681,9 @@ export class MyEditor extends React.Component {
 
       // 判断是否全部上传完成，
       if (self.checkUpload()) {
-        WebViewBridge.send(JSON.stringify({
+        this.postMessage({
           type: 'uploaded'
-        }));
+        })
       }
 
     })
@@ -798,6 +834,7 @@ export class MyEditor extends React.Component {
               blockStyleFn={getBlockStyle}
               onChange={this.onChange}
               handleKeyCommand={this.handleKeyCommand}
+              // placeholder={'hahahaha...'}
               placeholder={placeholder}
               ref="editor"
               stripPastedStyles={true}
