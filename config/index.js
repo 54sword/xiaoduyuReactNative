@@ -1,40 +1,39 @@
 
-
-var config = {
+let config = {
   debug: false,
 
   // 反馈邮箱（用户无法登陆或使用异常，可以通过该邮箱联系我们）
-  feedback_email: '54sword@gmail.com',
-  // API 地址
-  // api_url: 'https://api.xiaoduyu.com',
-  api_url: 'http://192.168.1.4:3000',
-  api_verstion: 'api/v1',
+  feedbackEmail: '54sword@163.com',
 
   // 官网
-  official_website: 'https://www.xiaoduyu.com',
+  officialWebsite: 'https://www.xiaoduyu.com',
 
   // 原始的api域名，第三方登录的时候，跳转使用
-  original_api_domain: 'https://api.xiaoduyu.com',
+  apiDomain: 'https://api.xiaoduyu.com',
 
-  graphql_url: 'https://api.xiaoduyu.com/graphql',
+  // graphql
+  graphqlUrl: 'https://api.xiaoduyu.com/graphql',
 
   // websocket 链接地址
-  socket_url: 'https://api.xiaoduyu.com',
+  socketUrl: 'https://api.xiaoduyu.com',
 
-  GA: '',
+  // GA: '',
+  
   // 微信开放平台，移动应用openid
-  wechat_appid: 'wxdc4c0a66df9da9b5',
+  wechatAppid: '',
 
   editor: {
     // 是否启动开发环境
     dev: false
-  }
+  },
+  
+  GA: ''
 }
 
 // 开发环境配置
 if (config.debug) {
-  config.graphql_url = 'http://192.168.1.4:3000/graphql';
-  config.socket_url = 'http://192.168.1.4:3000';
+  config.graphqlUrl = 'http://192.168.1.4:3000/graphql';
+  config.socketUrl = 'http://192.168.1.4:3000';
   //开发环境富文本编辑器配置
   // ./editor
   config.editor = {

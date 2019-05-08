@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const config = require('../config/index.js');
+const config = require('../app/config/index.js');
 
 module.exports = {
   entry: './src/index.js',
@@ -19,8 +19,8 @@ module.exports = {
     hot: true,
     inline: true,
     // progress: true,
-    host: config.editor.host,
-    port: config.editor.port
+    host: '192.168.1.4',//config.editor.host,
+    port: 5000//config.editor.port
   },
 
   resolve: {

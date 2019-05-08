@@ -1,8 +1,6 @@
-/** @format */
-// import '@babel/polyfill';
 import {AppRegistry} from 'react-native';
-// import Root from './App';
-import Root from './src/root';
+// import App from './App.js';
+import App from './app/index';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => Root);
+AppRegistry.registerComponent(appName, () => App);

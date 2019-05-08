@@ -94,26 +94,26 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
     defaultConfig {
         applicationId "com.xiaoduyureactnative"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        manifestPlaceholders = [
-                JPUSH_APPKEY: "521b4e4d1cc1447ec6c452b7",
-                APP_CHANNEL : "default",
-                QQ_APPID: "101306423"
-        ]
-
-        ndk {
-            abiFilters "armeabi-v7a", "x86"
-        }
         vectorDrawables.useSupportLibrary = true
+        manifestPlaceholders = [
+            QQ_APPID: ""
+        ]
     }
+
     signingConfigs {
         release {
             if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
@@ -124,12 +124,13 @@ android {
             }
         }
     }
+
     splits {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
             universalApk false  // If true, also generate a universal APK
-            include "armeabi-v7a", "x86"
+            include "armeabi-v7a", "x86", "arm64-v8a", "x86-64"
         }
     }
     buildTypes {
@@ -144,7 +145,7 @@ android {
         variant.outputs.each { output ->
             // For each separate APK per architecture, set a unique version code as described here:
             // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
-            def versionCodes = ["armeabi-v7a":1, "x86":2]
+            def versionCodes = ["armeabi-v7a":1, "x86":2, "arm64-v8a": 3, "x86-64": 4]
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
@@ -155,16 +156,16 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-webview-bridge')
-    implementation project(':react-native-qq')
-    implementation project(':jcore-react-native')
-    implementation project(':jpush-react-native')
-    implementation project(':react-native-vector-icons')
-    implementation project(':react-native-toasty')
-    implementation project(':react-native-image-crop-picker')
-    implementation project(':react-native-cookie')
+    implementation project(':react-native-community-netinfo')
     implementation project(':react-native-splash-screen')
+    implementation project(':react-native-aliyun-push')
+    implementation project(':react-native-cookies')
+    implementation project(':react-native-webview')
     implementation project(':RCTWeChat')
+    implementation project(':react-native-qq')
+    implementation project(':react-native-image-crop-picker')
+    implementation project(':@react-native-community_async-storage')
+    implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules

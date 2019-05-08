@@ -43964,57 +43964,92 @@ var MyEditor = exports.MyEditor = function (_React$Component2) {
       this.onChange(this.state.editorState);
       this.props.getEditor(this.refs.editor);
 
-      setTimeout(function () {
+      // alert('11112222');
 
-        WebViewBridge.onMessage = function (message) {
+      // setTimeout(()=>{
 
-          message = decodeURIComponent(message);
-          message = JSON.parse(message);
+      var onMessage = function onMessage(message) {
 
-          switch (message.type) {
-            case 'focus':
-              self.refs.editor.focus();
-              break;
-            case 'blur':
-              self.refs.editor.blur();
-              break;
-            case 'placeholder':
-              self.setState({ placeholder: message.data });
-              break;
-            case 'set-content':
+        message = decodeURIComponent(message);
+        // alert(message);
+        message = JSON.parse(message);
 
-              var decorator = new _draftJs.CompositeDecorator([{
-                strategy: findLinkEntities,
-                component: Link
-              }]);
+        switch (message.type) {
+          case 'focus':
+            self.refs.editor.focus();
+            break;
+          case 'blur':
+            self.refs.editor.blur();
+            break;
+          case 'placeholder':
+            self.setState({ placeholder: message.data });
+            break;
+          case 'set-content':
 
-              /*
-              self.setState({
-                editorState: EditorState.createWithContent(convertFromRaw(message.data), decorator)
-              });
-              */
+            var decorator = new _draftJs.CompositeDecorator([{
+              strategy: findLinkEntities,
+              component: Link
+            }]);
 
-              self._onChange(_draftJs.EditorState.createWithContent((0, _draftJs.convertFromRaw)(message.data), decorator));
-              break;
-            case 'add-image-placeholder':
-              self.addImage(message.data);
-              // self.addImage([{
-              //   name: message.data.name,
-              //   src: message.data.src
-              // }]);
-              break;
+            /*
+            self.setState({
+              editorState: EditorState.createWithContent(convertFromRaw(message.data), decorator)
+            });
+            */
 
-            case 'add-image':
-              self.updateImage(message.data.src, message.data.name);
-              break;
+            self._onChange(_draftJs.EditorState.createWithContent((0, _draftJs.convertFromRaw)(message.data), decorator));
+            break;
+          case 'add-image-placeholder':
+            // alert('1111');
+            self.addImage(message.data);
+            // self.addImage([{
+            //   name: message.data.name,
+            //   src: message.data.src
+            // }]);
+            break;
 
-          }
-        };
-      }, 300);
+          case 'add-image':
+
+            self.updateImage(message.data.src, message.data.name);
+            break;
+
+        }
+      };
+
+      var eventListener = function eventListener(e) {
+
+        if (e.data && e.data.type) {} else if (e.data) {
+          // alert(e.data);
+          onMessage(e.data);
+          // window.ReactNativeWebView.postMessage('hi! RN');
+        }
+      };
+
+      var u = navigator.userAgent;
+      // alert(window.addEventListener);
+      var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+      var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+      // let eventListener = document.addEventListener;
+
+      if (isAndroid) {
+        document.addEventListener('message', eventListener);
+      } else {
+        window.addEventListener('message', eventListener);
+      }
+
+      // }, 300);
+    }
+  }, {
+    key: 'postMessage',
+    value: function postMessage(data) {
+      // WebViewBridge.send(JSON.stringify(data));
+      window.ReactNativeWebView.postMessage(JSON.stringify(data));
     }
   }, {
     key: '_onChange',
     value: function _onChange(editorState) {
+      var _this3 = this;
 
       var that = this;
 
@@ -44037,25 +44072,25 @@ var MyEditor = exports.MyEditor = function (_React$Component2) {
         _html = _html.replace(/<\/p>/gmi, '');
 
         if (!_html) {
-          WebViewBridge.send(JSON.stringify({
+          _this3.postMessage({
             type: 'onchange',
             data: {
               json: '',
               html: ''
             }
-          }));
+          });
           // RNMessageChannel.sendJSON({ josn: '', html: '' })
           // RNMessageChannel.emit('transport-content', { json: '', html: '' })
           return;
         }
 
-        WebViewBridge.send(JSON.stringify({
+        _this3.postMessage({
           type: 'onchange',
           data: {
             json: JSON.stringify((0, _draftJs.convertToRaw)(content)),
             html: html
           }
-        }));
+        });
 
         // RNMessageChannel.emit('transport-content', { json: JSON.stringify(convertToRaw(content)), html })
         // RNMessageChannel.sendJSON({ josn: JSON.stringify(convertToRaw(content)), html: html })
@@ -44156,6 +44191,7 @@ var MyEditor = exports.MyEditor = function (_React$Component2) {
   }, {
     key: '_updateImage',
     value: function _updateImage(url, name) {
+      var _this4 = this;
 
       var self = this;
       var editorState = self.state.editorState;
@@ -44189,9 +44225,9 @@ var MyEditor = exports.MyEditor = function (_React$Component2) {
 
         // 判断是否全部上传完成，
         if (self.checkUpload()) {
-          WebViewBridge.send(JSON.stringify({
+          _this4.postMessage({
             type: 'uploaded'
-          }));
+          });
         }
       });
     }
@@ -44336,8 +44372,9 @@ var MyEditor = exports.MyEditor = function (_React$Component2) {
             editorState: editorState,
             blockStyleFn: getBlockStyle,
             onChange: this.onChange,
-            handleKeyCommand: this.handleKeyCommand,
-            placeholder: placeholder,
+            handleKeyCommand: this.handleKeyCommand
+            // placeholder={'hahahaha...'}
+            , placeholder: placeholder,
             ref: 'editor',
             stripPastedStyles: true,
             spellCheck: true
