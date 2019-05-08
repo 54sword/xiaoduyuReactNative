@@ -5,19 +5,19 @@
 	<key>config</key>
 	<dict>
             <key>emas.appKey</key>
-            <string>25979224</string>
+            <string></string>
             <key>emas.appSecret</key>
-            <string>538ab81a04bce8e0ce72ecaf7ae3679f</string>
+            <string></string>
             <key>emas.bundleId</key>
             <string>com.xiaoduyu.react-native</string>
             <key>hotfix.idSecret</key>
-            <string>25979224-2</string>
+            <string></string>
             <key>hotfix.rsaSecret</key>
-            <string>MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCGJhafwot+0YG2qPHV3M9bKH2DzgVf8sdV4548tdi7ch2R6RxxfpWMJmDdW1+gGSw0lsYXtGsEB+bDXwmrf2HGwE7QAs1glwyZw57ZXdu9h6RWhasQRzRnt0/O4/XJ6bj2tlWc7SYY6tL0FjPWmOCwlGtkt9agB9oMo5TPpaKM4ZnaE6xra0pGglYEW2ptlUWZ33mtUR1IwMjxizToj8WsMPP8PBlUfBLi0PySx2fRzBdOWWCmElq0CuulACjEBBjYcS1I7S4IUuTBDYrXqkecv4F3EJrx36ukPIwJC2FE8k+W7TDv7EfyAnE6sKVFjjKWewKcO9RWKxr7ngQftMelAgMBAAECggEAJ6gu2/+5GT56KDN9eomSSxKHOGW5NQoiX4OwjaX8cj1j/HR7Uhnnv8zAqe+PL1cBuHIyEWPmlwR29Z6szyQTFZxYMCoD6N/+e55W4U9b3IWy0VkmnuNN3LNWRoUhbhVH9rckTAXXU1poDnxZysDa+5iEvvuR2TE5Bq99GH2QtjC1ArqJdVtv82G+RudNuv+RW+Vq5+TP2mo4YxNzmi2aM8uuObAZpv2UhLNpTM6TyGiIutnDW9zHWQAo8SwwaaRHO6+543LtVsJhknPBHJKeGfh4hSvDTwUDPHBDeZRtEnbaAVJd5qLua1y4rmTeKZt2q2MXIbnuqMZIEt6u1NDqQQKBgQDOg9R/4FAa2ikr949LKurHJwPNGvInQpsykPpt6USouuIz9MbuD5gz16yqFdoe8xCLtCDemk8UA9F7TovQVKS+qZUkBd2Nqcfr5Dyo0Rg092gnIodidZqEMp5Sa1fXCQ69fvJaTYrMz28EAXwEWgsxO3ud6ugLLZ/oXvc2UwjWiQKBgQCmSyB9VSgQfhyEtotrhnYBPmqU5vENxA0vPcNZl/lDWWfhz7fuyhEYOmvIAbmcms+CXG1wWD3ABLfySfdFaOOAxGXwU1sXj1uH7aHtdtz8Jgiy+MAuzYDFOKXPkNvpffv7scEvQf1p7VYkN4Ur12ERs+AYwbK1AvOt9W/W3uIhPQKBgEXpJwTrQPL2K73wnpfJvZURxh2nI5ba24MwxTZ0I4QjT/RaxwVMTjAusQsbPq3/hvhkUERLZL3X1RCzNG2gWe0Zp518RtZwRXe72jUkI9e6cY3eCIryWQ6rvCEWqbPoIw9PbGfZnEVda62lewBWIzfVdTGulkNCfMHDdFj1nyZRAoGBAJ5Uw49xyB7D5GVb5S0wriSLCDHUHUnNE/yZ4ujoMRW2B5nSC7/ZNyOJZFvfgJmiMNdfJ3gjHFA6beXMFRpKPuq4lJKY2w94mF64nEebt9aAZCH7hAhL9EJTqFQUCb6sDILeASD8xMrZhf4furU+cZbIXCNWMc/1CozkNmMwfb/FAoGBAJOvQifBT+yhmkM7AVXgUTAw8ClKqfrmJk/9C6IMpvAwexTUkZAwfimlik4FiuB66rkxls+FLO+HoLfXhZrTeC4R7MMXCpFJUagrw3OMpzndtRrKHasFzZ/la8MDSTF4a58vxAo/3U5rWioNk/reIfqiGGGfnvn7FcPlm4e74UYh</string>
+            <string></string>
             <key>httpdns.accountId</key>
-            <string>189741</string>
+            <string></string>
             <key>httpdns.secretKey</key>
-            <string>b8b76ee512a1f91de13cfcff5c08a61c</string>
+            <string></string>
     	</dict>
 	<key>services</key>
 	<dict>

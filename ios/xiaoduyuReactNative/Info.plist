@@ -29,7 +29,7 @@
 			<string>wexin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wxdc4c</string>
+				<string>wxdc</string>
 			</array>
 		</dict>
 		<dict>
@@ -39,7 +39,7 @@
 			<string>qq</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tencent110</string>
+				<string>tencent11</string>
 			</array>
 		</dict>
 	</array>
